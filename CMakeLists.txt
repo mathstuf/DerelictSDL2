@@ -18,3 +18,12 @@ add_library(DerelictSDL2 STATIC
     source/derelict/sdl2/types.d)
 target_link_libraries(DerelictSDL2
     Derelict::util)
+
+install(
+    TARGETS             DerelictSDL2
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
+install(
+    DIRECTORY   source/
+    DESTINATION include/d)
